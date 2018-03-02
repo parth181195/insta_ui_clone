@@ -6,10 +6,11 @@ class MyStories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-      padding: new EdgeInsets.only(top: 10.0),
+      // padding: new EdgeInsets.only(top: 10.0),
       // height: statusBarHeight + barHeight,
       decoration:  new BoxDecoration(
         color: Colors.transparent,
+        // border: new Border(bottom: new BorderSide(color: Colors.black12))
       ),
       child: new Column(
         children: <Widget>[
@@ -25,7 +26,9 @@ class MyStories extends StatelessWidget {
                 ),
               ),
               new FlatButton(
+                splashColor: Colors.transparent,
                 color: Colors.transparent,
+                highlightColor: Colors.transparent,
                 onPressed: () => Scaffold.of(context).showSnackBar(new SnackBar(content: new Text('watch all'))),
                 child: new Row(
                   children: <Widget>[
@@ -38,12 +41,12 @@ class MyStories extends StatelessWidget {
           ),
           
           new Container(
-            constraints: new BoxConstraints(maxWidth: double.INFINITY,maxHeight: 120.0),
+            constraints: new BoxConstraints(maxWidth: double.INFINITY,maxHeight: 90.0),
             child: new ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 10,
-              itemExtent: 100.0,
-              padding: new EdgeInsets.all(10.0),
+              itemExtent: 90.0,
+              // padding: new EdgeInsets.all(10.0),
               itemBuilder: (context, int) {return new StoryBuilder(int);} ,
             ),
           ), 
@@ -112,6 +115,13 @@ class StoryBuilder extends StatelessWidget{
     );
   }
 }
+
+// class SmallStoryIcon extends StatelessWidget{
+// @override
+// Widget build(BuildContext context) => new Container(
+
+// );
+// }
       //     new Container(
       //   margin: new EdgeInsets.all(10.0),
       //   decoration: new BoxDecoration(

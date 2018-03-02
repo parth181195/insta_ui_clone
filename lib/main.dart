@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import './appbar.dart';
-import './stories.dart';
-
+import './posts.dart';
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -16,6 +15,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  //  GlowingOverscrollIndicator({color: Colors.transparent,axisDirection: AxisDirection.down,});
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -24,7 +24,7 @@ class MyHomePage extends StatelessWidget {
         child: new Column(
           children: <Widget>[
             new MyAppBar(),
-            new MyStories()
+            new PostWrapper(),
           ],
         )
       ),
